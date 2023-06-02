@@ -1,8 +1,9 @@
-import { ThemeProvider } from '@mui/material'
-import type { AppProps } from 'next/app'
-import { useEffect } from 'react'
-import '../styles/globals.css'
-import { theme } from '../theme/theme'
+import { ThemeProvider } from '@mui/material';
+import type { AppProps } from 'next/app';
+import { useEffect } from 'react';
+import '../styles/globals.css';
+import '../styles/scss/styles.scss';
+import { theme } from '../theme/theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
