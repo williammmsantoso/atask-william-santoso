@@ -36,5 +36,10 @@
   .default-button:hover,
   .default-button:focus {
     opacity: .75;
-  } 
+  }
+
+  .default-button:disabled {
+    opacity: .75;
+    cursor: not-allowed;
+  }
 }

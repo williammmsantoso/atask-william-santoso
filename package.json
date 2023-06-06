@@ -15,9 +15,11 @@
     "@mui/icons-material": "^5.8.0",
     "@mui/material": "^5.8.0",
     "@mui/styled-engine-sc": "^5.8.0",
+    "axios": "^0.27.2",
     "formik": "^2.4.1",
     "lodash": "^4.17.21",
     "next": "12.1.6",
+    "octokit": "^2.0.19",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "yup": "^1.2.0"
