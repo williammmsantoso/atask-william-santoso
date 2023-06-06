@@ -1,9 +1,9 @@
 import { TextField, Typography } from '@mui/material'
 import { Form, Formik } from 'formik';
 import type { NextPage } from 'next'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { searchUserValidator } from '../helpers/validator';
-import { getUser, searchUser } from './api/user';
+import { searchUser } from './api/user';
 import Loader from '../components/loader';
 import AccordionResult from '../components/accordionResult';
 
@@ -15,8 +15,6 @@ const Home: NextPage = () => {
   const initialValues = { user: '' };
 
   const onHandleSubmit = (value: any) => {
-    console.log('onHandleSubmit', value);
-
     if (value) {
       setSearchValue(value?.user);
 
@@ -26,7 +24,6 @@ const Home: NextPage = () => {
           setLoading(false);
         })
         .catch((error: any) => {
-          console.log('error: ', error);
           setData([]);
           setLoading(false);
         })
@@ -63,6 +60,7 @@ const Home: NextPage = () => {
             <Form onSubmit={handleSubmit} autoComplete="off">
               <div className="input-wrapper">
                 <TextField
+                  data-testid='user'
                   id='user'
                   name='user'
                   label='User'
@@ -76,6 +74,8 @@ const Home: NextPage = () => {
 
               <div className="button-wrapper">
                 <button
+                  data-testid='button-submit-search'
+                  id='button-submit-search'
                   className="default-button"
                   role="button"
                   type="submit"

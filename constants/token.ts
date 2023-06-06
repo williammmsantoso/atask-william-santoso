@@ -1,4 +1,4 @@
-export const SESSION_TOKEN = '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';
+export const SESSION_TOKEN = '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';
 
 export const headers = { 
     headers: {

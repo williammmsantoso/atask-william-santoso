@@ -12,7 +12,7 @@ const AccordionResult = ({ title, repositories }: AccordionResultInterface) => {
     return <div className="accordion-wrapper">
         <Accordion>
             <AccordionSummary
-                expandIcon={<ExpandMore />}
+                expandIcon={<div id="expand-button"><ExpandMore /></div>}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
             >
@@ -21,7 +21,7 @@ const AccordionResult = ({ title, repositories }: AccordionResultInterface) => {
             <AccordionDetails>
                 {
                     repositories && repositories.length > 0 && repositories.map((item) => {
-                        return <AccordionCard name={item?.name} stargazers_count={item.stargazers_count} description={item.description} />
+                        return <AccordionCard name={item?.name} stargazers_count={item.stargazers_count} description={item.description} html_url={item.html_url} />
                     })
                 }
             </AccordionDetails>
