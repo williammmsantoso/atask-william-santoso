@@ -20,8 +20,10 @@ const AccordionResult = ({ title, repositories }: AccordionResultInterface) => {
             </AccordionSummary>
             <AccordionDetails>
                 {
-                    repositories && repositories.length > 0 && repositories.map((item) => {
-                        return <AccordionCard name={item?.name} stargazers_count={item.stargazers_count} description={item.description} html_url={item.html_url} />
+                    repositories && repositories.length > 0 && repositories.map((item, idx: number) => {
+                        if (idx < 5) {
+                            return <AccordionCard name={item?.name} stargazers_count={item.stargazers_count} description={item.description} html_url={item.html_url} />
+                        }
                     })
                 }
             </AccordionDetails>

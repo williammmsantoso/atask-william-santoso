@@ -20,4 +20,18 @@
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
     cursor: pointer;
+
+    .accordion-card-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+
+        .accordion-card-star {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+        }
+    }
 }

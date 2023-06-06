@@ -12,11 +12,11 @@ export interface AccordionResultRepositoriesInterface {
 const AccordionCard = ({ name, stargazers_count, description, html_url }: AccordionResultRepositoriesInterface) => {
   return (
     <div className="accordion-card-wrapper" onClick={()=> window.open(html_url, "_blank")}>
-        <div className="flex items-center justify-between mb-2">
+        <div className="accordion-card-title">
              <Typography variant="subtitle1">
                 {name}
             </Typography>
-            <div className="flex items-center justify-between gap-2">
+            <div className="accordion-card-star">
                 <Typography variant="subtitle1">
                     {stargazers_count}
                 </Typography>

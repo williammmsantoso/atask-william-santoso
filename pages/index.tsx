@@ -24,6 +24,7 @@ const Home: NextPage = () => {
           setLoading(false);
         })
         .catch((error: any) => {
+          console.log('error: ', error);
           setData([]);
           setLoading(false);
         })
