@@ -1,4 +1,4 @@
-export const SESSION_TOKEN = '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';
+export const SESSION_TOKEN = process.env.NEXT_SESSION_TOKEN;
 
 export const headers = { 
     headers: {

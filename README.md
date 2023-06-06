@@ -21,3 +21,8 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+LIVE DEMO
+
+Open [https://williammmsantoso.github.io/atask-william-santoso/](DEMO).
